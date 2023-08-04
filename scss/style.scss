@@ -1,0 +1,95 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+}
+
+body{
+    background: rgba(234, 198, 150, 1);
+    color: #ffff;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+img {
+    width: 100%;
+}
+
+.slider {
+    position: relative;
+    width: 800px;
+    margin: auto;
+    height: 300px;
+    overflow: hidden;
+
+    .slide {
+            height: 600px;
+            width: 900px;
+            background-color: green;
+            position: absolute;
+            z-index: 0;
+            left: 0;
+            top: 0;
+            background-color: rebeccapurple;
+        }
+                .sl1 {
+                    background-color: rgba(146, 136, 248, 1);
+                }
+        
+                .sl2 {
+                    background-color: rgba(206, 206, 90, 1);
+                }
+        
+                .sl3 {
+                    background-color: rgba(117, 194, 246, 1);
+                }
+        
+                .sl4 {
+                    background-color: rgba(240, 222, 54, 1);
+                }
+
+    
+        .active {
+            transform: translateX(0%) translateZ(0);
+            transition: 0.5s all cubic-bezier(0.4, 0.0, 0.2, 1);
+            z-index: 100;
+        }
+    
+        .prev {
+            transform: translateX(-100%) translateZ(0);
+            transition: 0.5s all cubic-bezier(0.4, 0.0, 0.2, 1);
+            z-index: 90;
+        }
+    
+        .next {
+            transform: translateX(100%) translateZ(0);
+            transition: 0.5s all cubic-bezier(0.4, 0.0, 0.2, 1);
+            z-index: 90;
+        }
+    
+    
+        .arrows {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            z-index: 110;
+            left: 0;
+            padding: 16px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-sizing: border-box;
+            position: absolute;
+            left: 0%;
+            font-size: 32px;
+            color: rgb(0, 0, 0);
+        }
+}
